@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:Voets_Eventservices_2"
+       Title="Voets_Eventservices_2"
+       x:Class="Voets_Eventservices_2.AppShell">
+
+    <Shell.Resources>
+        <Style x:Key="BaseFlyoutItemStyle" TargetType="ShellContent">
+            <Setter Property="Shell.BackgroundColor" Value="#2f2f2f" />
+            <Setter Property="Shell.ForegroundColor" Value="#EF6F2E" />
+            <Setter Property="Shell.TitleColor" Value="White"/>
+        </Style>
+    </Shell.Resources>
+
+    <FlyoutItem Title="Home"  Icon="home.png">
+        <ShellContent Style="{StaticResource BaseFlyoutItemStyle}">
+            <local:HomePage />
+        </ShellContent>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="About" Icon="icon_about.png">
+        <ShellContent Style="{StaticResource BaseFlyoutItemStyle}">
+            <local:AboutPage />
+        </ShellContent>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Experiences" Icon="checklist.png">
+        <ShellContent Style="{StaticResource BaseFlyoutItemStyle}">
+            <local:ExperiencePage />
+        </ShellContent>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Companies" Icon="factory.png">
+        <ShellContent Style="{StaticResource BaseFlyoutItemStyle}">
+            <local:CompaniesPage />
+        </ShellContent>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Contact" Icon="phone.png">
+        <ShellContent Style="{StaticResource BaseFlyoutItemStyle}">
+            <local:ContactPage />
+        </ShellContent>
+    </FlyoutItem>
+
+    <MenuItem
+        x:Name="LogoutButton"
+        Text="Logout"
+        IconImageSource="logout.png"
+        Clicked="OnLougoutButton_Clicked">
+        <!--Style="{StaticResource BaseFlyoutItemStyle}"-->
+    </MenuItem>
+</Shell>

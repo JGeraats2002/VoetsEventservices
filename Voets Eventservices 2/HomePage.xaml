@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Voets_Eventservices_2"
+             x:Class="Voets_Eventservices_2.HomePage"
+             Title="Home"
+             BackgroundColor="#2f2f2f">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid BackgroundColor="#2f2f2f" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Frame BackgroundColor="#2f2f2f" BorderColor="White">
+                    <Image
+                        Source="bell.png"
+                        Aspect="AspectFit"
+                        WidthRequest="50"
+                        HorizontalOptions="Start"
+                        />
+                </Frame>
+                <Frame Grid.Column="1" BackgroundColor="#2f2f2f" BorderColor="White">
+                    <Label
+                        x:Name="dateToday"
+                        Text="Vandaag"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        />
+                </Frame>
+                <Frame Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="#2f2f2f" BorderColor="White">
+                    <Label
+                        Text="Lennie, welkom op je eigen app!
+                        In deze app zul je je eigen gedicht vinden.
+                        Of ja, een gedicht?... zo zou ik het niet noemen, maar beslis zelf maar achteraf ;)"
+                        TextColor="White"
+                        HorizontalTextAlignment="Center"
+                        FontSize="40"
+                        />
+                </Frame>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

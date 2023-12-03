@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Voets_Eventservices_2"
+             x:Class="Voets_Eventservices_2.ExperiencePage"
+             Title="Experience"
+             Background="#D14D75">
+    
+    <ContentPage.Content>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <CollectionView x:Name="myCollectionView" IsEnabled="True" SelectionMode="Single" Grid.RowSpan="2" Grid.ColumnSpan="2" SelectionChanged="myCollectionView_SelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                             
+                            <Frame 
+                                BackgroundColor="Black"
+                                Grid.RowSpan="3"
+                                BorderColor="White"
+                                CornerRadius="10"/>
+                            
+                            <ImageButton
+                                Grid.Row="1"
+                                BackgroundColor="Blue"
+                                Source="{Binding Image}"
+                                Aspect="AspectFit"
+                                CornerRadius="50"
+                                Margin="10,0,10,0"
+                                BorderColor="White"
+                                BorderWidth="1"
+                                IsEnabled="False"
+                                />
+
+                            <Label
+                                Text="{Binding Title}"
+                                FontAttributes="Bold"
+                                TextColor="Black"
+                                Background="#EF6F2E"
+                                Padding="10"
+                                FontSize="40"
+                                Margin="10"
+                                />
+
+                            <Label
+                                Text="{Binding MetaDescription}"
+                                Grid.Row="2"
+                                VerticalTextAlignment="End"
+                                TextColor="White"
+                                Background="#1A64AB"
+                                Padding="10"
+                                Margin="10"
+                                FontSize="20"/>
+                            
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

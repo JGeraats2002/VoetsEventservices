@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Voets_Eventservices_2.WelcomePage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#2F2F2F">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <ScrollView x:Name="scrollView" Orientation="Both">
+                <StackLayout Background="#2F2F2F" VerticalOptions="CenterAndExpand">
+                    <Label
+                        HorizontalOptions="Center"
+                        Text="Welcome"
+                        FontFamily="MasPendiWow-qZK90.ttf#Mas Pendi Wow"
+                        FontSize="100"
+                        TextColor="White"
+                        />
+                    <Label
+                        HorizontalOptions="Center"
+                        Text="TO THE OFFICIAL"
+                        FontSize="30"
+                        TextColor="White"/>
+                    <Image
+                        x:Name="OpenWebsite"
+                        Source="voets_logo.webp"
+                        HeightRequest="50"
+                        Aspect="AspectFit"
+                        Margin="50,50,50,30"
+                        />
+                    <Label
+                        HorizontalOptions="Center"
+                        Text="APP"
+                        FontSize="50"
+                        TextColor="White"/>
+                </StackLayout>
+            </ScrollView>
+
+            <ImageButton
+                x:Name="LoginButton"
+                Grid.Row="1"
+                Source="arrow_down.png"
+                HeightRequest="50"
+                BackgroundColor="#EF6F2E"
+                HorizontalOptions="Center"
+                Margin="0,0,0,25"
+                CornerRadius="6"
+                Clicked="LoginButton_Clicked"
+                />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Voets_Eventservices_2"
+             x:Class="Voets_Eventservices_2.CompaniesPage"
+             Title="Companies"
+             Background="#2f2f2f">
+
+    <ContentPage.Content>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <CollectionView x:Name="myCollectionView" IsEnabled="True" SelectionMode="Single" Grid.RowSpan="2" Grid.ColumnSpan="2" SelectionChanged="myCollectionView_SelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="250"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Frame 
+                                HorizontalOptions="Center"
+                                BackgroundColor="#EF6F2E"
+                                BorderColor="White"
+                                CornerRadius="10">
+                                <ImageButton
+                                    BackgroundColor="Transparent"
+                                    Source="{Binding Image}"
+                                    Aspect="AspectFit"
+                                    IsEnabled="False"
+                                    HorizontalOptions="Center"
+                                    />
+                            </Frame>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

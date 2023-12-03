@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Voets_Eventservices_2.ContactPage"
+             Title="Contact"
+             Background="#2f2f2f">
+    <ContentPage.Content>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Label
+                Text="Address"
+                TextColor="white"
+                VerticalOptions="Center"/>
+            <Button
+                x:Name="addressButton"
+                Grid.Column="1"
+                Text="Reewoude 90, 6075NK Herkenbosch"
+                HorizontalOptions="StartAndExpand"
+                Background="transparent"
+                FontAttributes="Bold"
+                Margin="20,0,0,0"
+                Clicked="addressButton_Clicked"/>
+            <Label
+                Text="Mail"
+                Grid.Row="1"
+                TextColor="white"
+                VerticalOptions="Center"/>
+            <Button
+                x:Name="mailButton"
+                Grid.Column="1"
+                Grid.Row="1"
+                Text="info@voetseventservices.nl"
+                BackgroundColor="Transparent"
+                Margin="20,0,0,0"
+                Clicked="mailButton_Clicked"
+                HorizontalOptions="Start"/>
+            <Label
+                Text="Phonenumber"
+                Grid.Row="2"
+                TextColor="white"
+                VerticalOptions="Center"/>
+            <Button
+                x:Name="phoneButton"
+                Grid.Column="1"
+                Grid.Row="2"
+                Text="+31 6 510 283 61"
+                HorizontalOptions="Start"
+                BackgroundColor="Transparent"
+                Margin="20,0,0,0"
+                Clicked="phoneButton_Clicked"/>
+            <Label
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Text="Or go to our website:"
+                TextColor="White"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Margin="0,20,0,0"/>
+            <Button
+                x:Name="websiteButton"
+                Grid.ColumnSpan="2"
+                Grid.Row="4"
+                Text="voetseventservices.nl"
+                HorizontalOptions="Center"
+                BackgroundColor="Transparent"
+                Clicked="websiteButton_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

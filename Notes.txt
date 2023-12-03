@@ -1,0 +1,5 @@
+Colorcodes
+#2F2F2F
+#EF6F2E
+#D14D75
+#1A64AB
